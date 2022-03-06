@@ -1,0 +1,11 @@
+{
+    "manifest_version": 2,
+    "name": "jst6_progress",
+    "version": "1.0.0",
+    "content_scripts": [{
+        "matches": ["https://www.nict.go.jp/JST/JST6.html"],
+        "js": [
+            "content.js"
+        ]
+    }]
+}
