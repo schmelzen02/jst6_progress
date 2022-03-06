@@ -5,11 +5,16 @@ timer.max = '100'
 document.querySelectorAll('tr')[1].after(timer)
 
 // マーカー追加
-const marker = document.createElement('div')
-marker.style.width = '100%'
-marker.style.marginLeft = '70%'
-marker.textContent = '▼'
-document.querySelectorAll('tr')[1].after(marker)
+const markerWrapper = document.createElement('div')
+markerWrapper.style.display = 'table'
+markerWrapper.style.width = '100%'
+for (let i = 0; i < 100; i += 10) {
+  const marker = document.createElement('div')
+  marker.style.display = 'table-cell'
+  marker.textContent = `▼.${i}`
+  markerWrapper.append(marker)
+}
+document.querySelectorAll('tr')[1].after(markerWrapper)
 
 // ミリ秒タイマー起動
 let timerId;
