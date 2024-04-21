@@ -1,8 +1,12 @@
 (() => {
   // プログレスバー追加
   const wrapper = document.createElement('div')
+  wrapper.classList.add('schmelzen-progress-wrapper')
   wrapper.innerHTML = `
   <style>
+  .schmelzen-progress-wrapper {
+    width: 100%;
+  }
   .schmelzen-table-wrapper {
     display: table;
     width: 100%;
@@ -14,7 +18,7 @@
     display: none;
   }
   .schmelzen-checkbox:checked + label {
-    color: #333333;
+    color: #ffffff;
   }
   #schmelzen-progress {
     width: 100%;
@@ -44,7 +48,7 @@
   </div>
   <progress id='schmelzen-progress' max='100'></progress>
   `
-  document.querySelectorAll('tr')[1].after(wrapper)
+  document.querySelectorAll('.time')[0].after(wrapper)
 
   // チェックボックス設定
   for (let i = 0; i < 100; i += 10) {
@@ -71,5 +75,5 @@
         progress.value = new Date((Date.now() - now) % 1000).toISOString().slice(20,22)
       }, 10)
     })
-  }).observe(document.querySelectorAll('table img')[15], {attributes: true})
+  }).observe(document.querySelectorAll('.time .num')[5], {attributes: true})
 })();
