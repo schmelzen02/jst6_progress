@@ -3,7 +3,14 @@
     "name": "jst6_progress",
     "version": "1.0.0",
     "content_scripts": [{
-        "matches": ["https://www.nict.go.jp/JST/JST6/"],
+        "matches": [
+            "https://www.nict.go.jp/JST/JST6/",
+            "https://www.nict.go.jp/JST/JST6/index.html",
+            "https://www.nict.go.jp/JST/JST6/index2.html",
+            "https://www.nict.go.jp/JST/JST6/index3.html",
+            "https://www.nict.go.jp/JST/JST6/index4.html",
+            "https://www.nict.go.jp/JST/JST6/index5.html"
+        ],
         "js": [
             "script.js"
         ]
